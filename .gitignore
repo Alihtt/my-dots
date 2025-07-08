@@ -1,0 +1,11 @@
+*
+
+!.gitignore
+
+!.config/
+
+!.config/fontconfig/
+!.config/fontconfig/**
+
+!.config/nvim/
+!.config/nvim/**
