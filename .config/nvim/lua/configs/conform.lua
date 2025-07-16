@@ -11,7 +11,7 @@ local options = {
         javascript = { "prettier" },
         typescript = { "prettier" },
         -- Ensure 'htmldjango' is also formatted by prettier
-        htmldjango = { "prettier" },
+        htmldjango = { "djlint" },
     },
 
     formatters = {
@@ -58,11 +58,16 @@ local options = {
                 "black",
             },
         },
+        djlint = {
+            command = "djlint",
+            args = { "--reformat", "--quiet", "-" }, -- Read from stdin
+            stdin = true,
+        },
     },
 
     format_on_save = {
         -- These options will be passed to conform.format()
-        timeout_ms = 500,
+        timeout_ms = 1500,
         lsp_format = "fallback",
     },
 }

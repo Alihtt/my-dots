@@ -78,6 +78,9 @@ return {
         end,
     },
     {
+        "djlint/djLint",
+    },
+    {
         "mg979/vim-visual-multi",
     },
     {
