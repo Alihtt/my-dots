@@ -37,6 +37,9 @@ local options = {
         use_languagetree = true,
     },
 
+    matchup = {
+        enable = true,
+    },
     indent = { enable = true },
 
     -- Configure injections for Django templates.
@@ -47,6 +50,8 @@ local options = {
         },
     },
 }
+
+vim.treesitter.language.register("html", "htmldjango")
 
 require("nvim-treesitter.configs").setup(options)
 

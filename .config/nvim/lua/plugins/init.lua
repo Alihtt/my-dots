@@ -1,5 +1,17 @@
 return {
-
+    -- Tag matching/navigation
+    {
+        "andymass/vim-matchup",
+        event = "VeryLazy",
+        config = function()
+            vim.g.matchup_matchparen_offscreen = { method = "popup" }
+        end,
+    },
+    {
+        "Bekaboo/dropbar.nvim",
+        event = "VeryLazy",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         event = { "BufReadPre", "BufNewFile" },
