@@ -58,16 +58,21 @@ local options = {
                 "black",
             },
         },
+        ruff_fix = {
+            command = "ruff",
+            args = { "check", "--fix", "--stdin-filename", "$FILENAME", "-" },
+            stdin = true,
+        },
         djlint = {
             command = "djlint",
-            args = { "--reformat", "--quiet", "-" }, -- Read from stdin
+            args = { "--reformat", "--quiet", "--indent", "4", "-" },
             stdin = true,
         },
     },
 
     format_on_save = {
         -- These options will be passed to conform.format()
-        timeout_ms = 1500,
+        timeout_ms = 5000,
         lsp_format = "fallback",
     },
 }
