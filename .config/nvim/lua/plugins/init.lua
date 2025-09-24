@@ -159,4 +159,9 @@ return {
             require("dap-python").setup("python")
         end,
     },
+
+    {
+        "tpope/vim-surround",
+        event = "VeryLazy",
+    },
 }
